@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>Make a Page</title>
+	</head>
+	<script type='text/javascript'>
+		var updateName = function() {
+			document.getElementById('name').innerHTML = document.getElementById('name_input').value;
+		};
+		var updateHeight = function() {
+			document.getElementById('animal').innerHTML = document.getElementById('height_input').value;
+		};
+		var updateAnimal = function() {
+			document.getElementById('height').innerHTML = document.getElementById('animal_input').value;
+		};
+		var updateClass = function() {
+			var c = document.getElementById('class_input');
+			var c_html = c.value;
+			for(var i = 0; i < 1000; i++) {
+				i = i;
+			}
+			document.getElementById('class').innerHTML = c_html;
+		};
+	</script>
+	<body>
+		<table>
+			<tr>
+				<td>
+					Name:<input type='text' name='name' id='name_input'/>
+				</td>
+				<td>
+					<input type='button' onclick='updateName()' value='Update'/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Height:<input type='text' name='height' id='height_input'/>
+				</td>
+				<td>
+					<input type='button' onclick='updateHeight()' value='Update'/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Favorite Animal:<input type='text' name='animal' id='animal_input'/>
+				</td>
+				<td>
+					<input type='button' onclick='updateAnimal()' value='Update'/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Class Year:<input type='text' name='class' id='class_input'/>
+				</td>
+				<td>
+					<input type='button' onclick='updateClass()' value='Update'/>
+				</td>
+			</tr>
+		</table>
+		<center>
+			<p color='green'>
+				<font size='16px'><u id='name'>NAME</u></font><br>
+				Height: <span id='height'>HEIGHT</span><br>
+				Favorite Animal: <span id='animal'>FAVORITE ANIMAL</span><br>
+				Class Year: <span id='class'>CLASS YEAR</span>
+			</p>
+		</center>
+	</body>
+
+</html>
